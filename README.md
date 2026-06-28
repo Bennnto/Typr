@@ -212,3 +212,5 @@ let index = array_util.find_index(numbers, 4) // 3
 ---
 
 ### Report Issues 
+report issues parsing or syntax error 
+[report](https://github.com/Bennnto/Typr/issues/new)
