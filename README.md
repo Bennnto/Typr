@@ -213,10 +213,10 @@ Generic Uitility for http post, get, put and delete
 
 |Function     |Signature         | Detail   |
 |:------------|:------------------|:--------|
-| `post`      | post [str, map, map] | Request post with url, headers, params|
-| `get`       | get [str, map, map] | Request get with url, headers, params|
-| `put`       | put [str, str, map, map] | Request put |
-| `delete`    | delete [str, map, map] | Requst delete |
+| `post`      | `post [str, map, map]` | Request post with url, headers, params|
+| `get`       | `get [str, map, map]` | Request get with url, headers, params|
+| `put`       | `put [str, str, map, map]` | Request put |
+| `delete`    | `delete [str, map, map]` | Requst delete |
 
 ```Example
 source "std_request" as http
