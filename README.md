@@ -208,7 +208,28 @@ let numbers = [1, 2, 3, 4, 5]
 let found = array_util.contains(numbers, 3) // true
 let index = array_util.find_index(numbers, 4) // 3
 ```
+### `std_request` 
+Generic Uitility for http post, get, put and delete
 
+|Function     |Signature         | Detail   |
+|:------------|:------------------|:--------|
+| `post`      | post [str, map, map] | Request post with url, headers, params|
+| `get`       | get [str, map, map] | Request get with url, headers, params|
+| `put`       | put [str, str, map, map] | Request put |
+| `delete`    | delete [str, map, map] | Requst delete |
+
+```Example
+source "std_request" as http
+try {
+  init map[str, str]: headers = ("Authoriazation" : "Bearer 123")
+  init map[str, str]: params = ("q" : "test")
+  let res = http.get("http://invalid-domain-xxxx.com", params, headers)
+} expect error {
+  disp("Caught Network Error:" + error) 
+}
+```
+>[!Note]
+> This module use `source std_request as ...` <br>
 ---
 
 ### Report Issues 
